@@ -1,14 +1,14 @@
 resource "lab" "main" {
   title       = "SIVA-Testing"
-  description = ""
+  description = "Testing the description"
 
   layout = resource.layout.single_panel
 
   settings {
-    theme = "modern-dark"
+    theme = "original"
 
     timelimit {
-      duration   = "15m"
+      duration   = "25m"
       show_timer = true
     }
 
@@ -20,6 +20,15 @@ resource "lab" "main" {
 
     controls {
       show_stop = true
+    }
+  }
+  content {
+    chapter "__default" {
+      title = "Default"
+      page "page-1-" {
+        title     = "page 1 "
+        reference = resource.page.page-1-
+      }
     }
   }
 }
