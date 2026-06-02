@@ -1,7 +1,3 @@
-resource "network" "ip1" {
-  subnet      = "10.100.100.0/24"
-  enable_ipv6 = false
-}
 
 resource "container" "container-test" {
   image {
